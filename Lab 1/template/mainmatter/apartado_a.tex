@@ -14,8 +14,8 @@ En este apartado trabajará con el notebook y las imágenes de las carpetas \tex
 
 
 
-\section*{Tarea A.1: Cargar Imágenes}
-\addcontentsline{toc}{section}{Tarea A.1: Cargar Imágenes}
+\section*{Tarea A.1: Carga de Imágenes}
+\addcontentsline{toc}{section}{Tarea A.1: Carga de Imágenes}
 Defina y ejecute el método para cargar imágenes \texttt{load\_images()}. Deberá pasar una lista que contenga las rutas de todas las imágenes de la carpeta \textit{left}.
 
 \section*{Tarea A.2: Detección de Esquinas}
@@ -38,27 +38,45 @@ Dibuje en las imágenes los puntos detectados por \texttt{cv2.findChessboardCorn
 Una vez dibujadas las detecciones, deberá diseñar una función de visualización de imágenes con OpenCV. Para ello, podrá apoyarse en los métodos \texttt{cv2.imshow()}, \texttt{cv2.waitKey()} y \texttt{cv2.imwrite()}.
 
 
-\section*{Tarea A.4: Obtener Coordenadas 3D de las Esquinas del Patrón}
-\addcontentsline{toc}{section}{Tarea A.4: Obtener Coordenadas 3D de las Esquinas del Patrón}
-Defina y ejecute el método \texttt{get\_chessboard\_points(chessboard\_shape, dx, dy)} que proporcione las coordenadas 3D de las esquinas del patrón. El sistema de referencia utilizado deberá estar anclado al propio patrón.
+\section*{Tarea A.4: Obtención de Coordenadas 3D de las Esquinas del Patrón}
+\addcontentsline{toc}{section}{Tarea A.4: Obtención de Coordenadas 3D de las Esquinas del Patrón}
+Defina y ejecute el método \texttt{get\_chessboard\_points(chessboard\_shape, dx, dy)} que proporcione las coordenadas 3D de las esquinas del patrón.
+
+Para ello, el punto de coordenadas $[0, 0, 0]^\top$ es la primera esquina detectada en el patrón de calibración. El eje X corresponde al lado corto del patrón, mientras que el eje Y corresponde al lado largo. La función devolverá un array de \texttt{numpy} de tamaño $ N \times 3 $ que contenga las coordenadas $(x, y, z)$, donde N es el número de esquinas.
+
+Para diseñar la función, tenga en cuenta que \texttt{chessboard\_shape} es una tupla que contiene el número de esquinas por fila y columna del patrón. Por otro lado, \texttt{dx} y \texttt{dy} corresponden al ancho y alto de cada cuadrado del patrón de calibración, que en esta práctica es de $30mm$.
+
 
 \section*{Tarea A.5: Calibración de la Cámara Izquierda}
 \addcontentsline{toc}{section}{Tarea A.5: Calibración de la Cámara Izquierda}
-Utilice \texttt{cv2.calibrateCamera()} para obtener los parámetros de calibración para la cámara de la izquierda.
+Utilice \texttt{cv2.calibrateCamera()} para obtener los parámetros de calibración para la cámara situada a la izquierda.
 
-\section*{Tarea A.6: Calibración de la Cámara Derecha}
-\addcontentsline{toc}{section}{Tarea A.6: Calibración de la Cámara Derecha}
-Repita el proceso (carga de imágenes, detección y comprobación de esquinas, etc.) para la cámara derecha.
+Deberá utilizar los resultados de \texttt{cv2.findChessboardCorners()} y el conjunto de puntos obtenido con \texttt{get\_chessboard\_points()} del ejercicio anterior.
 
+Filtre aquellas detecciones de esquinas que hayan sido procesadas correctamente. Recuerde que \texttt{cv2.findChessboardCorners()} devuelve una tupla donde el primer elemento es un Booleano. Este elemento indica si la detección es correcta o no.
+
+
+\newpage
 \section*{Preguntas}
-\addcontentsline{toc}{section}{Pregunta 1}
+\addcontentsline{toc}{section}{Preguntas}
 
 \vspace{5mm}
-\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta 1, halign=left]
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A1, halign=left]
+Repita el proceso (carga de imágenes, detección, comprobación de esquinas, etc.) para la cámara situada a la derecha. Deberá adjuntar:
+\begin{itemize}
+    \item Al menos 2 imágenes con la detección de esquinas.
+    \item Los parámetros intrínsecos y extrínsecos de la cámara.
+    \item Los coeficientes de distorsión y el error de calibración.
+\end{itemize}
+\end{tcolorbox}
+
+
+\vspace{5mm}
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A2, halign=left]
 ¿Observa diferencias entre las detecciones de esquinas realizadas con \texttt{cv2.findChessboardCorners()} y las refinadas con \texttt{cv2.cornerSubPix()}? Apoye su respuesta adjuntando imágenes.
 \end{tcolorbox}
 
 \vspace{5mm}
-\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta 2, halign=left]
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A3, halign=left]
 Por ahora, ha asumido que el número de imágenes que le hemos ofrecido es adecuado para obtener una calibración adecuada. Sin embargo, en su proyecto final, ¿cuántas imágenes cree que debería tomar con su cámara para calibrarla? Responda a esta pregunta y obtenga un orden de magnitud dibujando un diagrama de Pareto. En este, aparecerá el número de imágenes consideradas (eje horizontal) vs. el error de calibración (eje vertical).
 \end{tcolorbox}
