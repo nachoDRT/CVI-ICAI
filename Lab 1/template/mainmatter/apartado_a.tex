@@ -6,11 +6,13 @@ El objetivo del \textit{Apartado A} es conseguir los parámetros intrínsecos y 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{Lab 1/template/figures/stereo_camera.jpg}
-    \caption{Cámara estereográfica.}
+    \caption{Cámara estereoscópica.}
     \label{fig:stereo_camera}
 \end{figure}
 
-En este apartado trabajará con el notebook y las imágenes de las carpetas \textit{right} y \textit{left}. En primer lugar, fíjese en la documentación de OpenCV del método \texttt{cv2.calibrateCamera()} \footnote{Doc. \href{https://docs.opencv.org/4.x/d9/d0c/group\_\_calib3d.html\#ga687a1ab946686f0d85ae0363b5af1d7b}{cv2.calibrateCamera()} https://docs.opencv.org/4.x/d9/d0c/group\_\_calib3d.html\#ga687a1ab946686f0d85ae0363b5af1d7b}. Intente detectar los argumentos que requiere este método y cómo podrían derivarse de las imágenes. Una vez hecho ese ejercicio mental, deberá seguir los pasos de este enunciado para conseguir un modelo de cámara a partir de las imágenes de cada carpeta:
+En este apartado trabajará con el notebook y las imágenes de las carpetas \textit{right} y \textit{left}. En primer lugar, fíjese en la documentación de OpenCV del método \texttt{cv2.calibrateCamera()} \footnote{Doc. \href{https://docs.opencv.org/4.x/d9/d0c/group\_\_calib3d.html\#ga687a1ab946686f0d85ae0363b5af1d7b}{cv2.calibrateCamera()} https://docs.opencv.org/4.x/d9/d0c/group\_\_calib3d.html\#ga687a1ab946686f0d85ae0363b5af1d7b}. Intente detectar los argumentos que requiere este método y cómo podrían derivarse de las imágenes. 
+
+Una vez hecho ese ejercicio mental, deberá seguir los pasos de este enunciado para conseguir un modelo de cámara a partir de las imágenes de cada carpeta:
 
 
 
@@ -61,7 +63,7 @@ Filtre aquellas detecciones de esquinas que hayan sido procesadas correctamente.
 \addcontentsline{toc}{section}{Preguntas}
 
 \vspace{5mm}
-\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A1, halign=left]
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A.1, halign=left]
 Repita el proceso (carga de imágenes, detección, comprobación de esquinas, etc.) para la cámara situada a la derecha. Deberá adjuntar:
 \begin{itemize}
     \item Al menos 2 imágenes con la detección de esquinas.
@@ -72,11 +74,11 @@ Repita el proceso (carga de imágenes, detección, comprobación de esquinas, et
 
 
 \vspace{5mm}
-\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A2, halign=left]
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A.2, halign=left]
 ¿Observa diferencias entre las detecciones de esquinas realizadas con \texttt{cv2.findChessboardCorners()} y las refinadas con \texttt{cv2.cornerSubPix()}? Apoye su respuesta adjuntando imágenes.
 \end{tcolorbox}
 
 \vspace{5mm}
-\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A3, halign=left]
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A.3, halign=left]
 Por ahora, ha asumido que el número de imágenes que le hemos ofrecido es adecuado para obtener una calibración adecuada. Sin embargo, en su proyecto final, ¿cuántas imágenes cree que debería tomar con su cámara para calibrarla? Responda a esta pregunta y obtenga un orden de magnitud dibujando un diagrama de Pareto. En este, aparecerá el número de imágenes consideradas (eje horizontal) vs. el error de calibración (eje vertical).
 \end{tcolorbox}
