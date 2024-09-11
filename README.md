@@ -26,9 +26,10 @@ Each laboratory session contains the following:
 - 📄 **Guide**: A ``PDF`` guide with instructions to complete the session (currently only available in Spanish).
 - 💻 **Script**: a ``.ipynb`` or ``.py`` file to complete.
 - 🎞️ **Data**: A folder containing images to process.
-- 📝 **Template**: A folder with a ``latex`` template for writing your report.
+- 📝 **Template**: A folder with a ``latex`` template used to generate the guide. You can reuse it to write your report.
+- 📖 **README**: With links to motivate the session or to introduce the theory concepts.
 
-In addition, each session includes a template used to generate the manual (you can can reuse to write your report). The folder lab session folder is structured as follows:
+The folder lab session folder is structured as follows:
 
 ```bash
 .
@@ -41,7 +42,8 @@ In addition, each session includes a template used to generate the manual (you c
 │   ├── image1.png
 │   ├── image2.png
 │   └── ...
-└── template
+├── template
+└── README
 ```
 
 ## Expand
