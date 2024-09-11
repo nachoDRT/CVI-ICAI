@@ -1,4 +1,10 @@
-[![Descripción de la imagen](assets/cvi-icai.png)](https://x.com/nearcyan/status/1706914605262684394)
+<a href="https://x.com/nearcyan/status/1706914605262684394">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/cvi-icai-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="assets/cvi-icai-light.png">
+    <img alt="Descripción de la imagen" src="assets/cvi-icai-light.png">
+  </picture>
+</a>
 
 
 **Welcome to the repository for the *Computer Vision I* course at Comillas ICAI**. Here, you will find all the necessary files to complete the 4 lab sessions of the course, as well as a final lab project. 💻📷
