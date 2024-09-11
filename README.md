@@ -33,6 +33,7 @@ Each laboratory session contains the following:
 - 💻 **Script**: a ``.ipynb`` or ``.py`` file to complete.
 - 🎞️ **Data**: A folder containing images to process.
 - 📝 **Template**: A folder with a ``latex`` template used to generate the guide. You can reuse it to write your report.
+- 🧩 **Assets**: Files to style or improve documentation.
 - 📖 **README**: With links to motivate the session or to introduce the theory concepts.
 
 The folder lab session folder is structured as follows:
@@ -48,6 +49,7 @@ The folder lab session folder is structured as follows:
 │   ├── image1.png
 │   ├── image2.png
 │   └── ...
+├── assets
 ├── template
 └── README
 ```
