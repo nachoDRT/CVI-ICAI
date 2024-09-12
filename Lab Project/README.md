@@ -39,5 +39,12 @@ The folder lab session folder is structured as follows:
 └── README
 ```
 
-## Get ready (WIP 🛠️)
+## Get ready 🤓 (WIP 🛠️)
 If you're not enrolled or don't have access to the theory, or just want a refresher, check out the resources below before starting the lab.
+
+
+<h2 align="center" style="margin-bottom: 0px;">Here we go: Lab Project!</h2>
+<p align="center">
+  <img src="https://i.giphy.com/media/3orif60PUpLFuG4Sru/giphy.gif" width="300" style="margin-bottom: 0px;" />
+</p>
+<h3 align="center" style="margin-top: 0px;"> Hint: Don't be like Homer</h3>

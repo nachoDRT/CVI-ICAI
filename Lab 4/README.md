@@ -21,7 +21,7 @@ This laboratory session contains the following:
 - 🧩 **Assets**: Files to style or improve documentation.
 - 📖 **README**: With links to motivate the session or to introduce the theory concepts.
 
-The folder lab session folder is structured as follows:
+The lab session folder is structured as follows:
 
 ```bash
 .
@@ -39,5 +39,11 @@ The folder lab session folder is structured as follows:
 └── README
 ```
 
-## Get ready (WIP 🛠️)
+## Get ready 🤓 (WIP 🛠️)
 If you're not enrolled or don't have access to the theory, or just want a refresher, check out the resources below before starting the lab.
+
+<h2 align="center" style="margin-bottom: 0px;">Here we go: Lesson 4!</h2>
+<h3 align="center" style="margin-top: 0px;">Object tracking</h3>
+<p align="center">
+  <img src="https://i.giphy.com/media/3o6MbmWIQi0dnHBXK8/giphy.gif" width="300" style="margin-bottom: 20px;" />
+</p>

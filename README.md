@@ -36,7 +36,7 @@ Each laboratory session contains the following:
 - 🧩 **Assets**: Files to style or improve documentation.
 - 📖 **README**: With links to motivate the session or to introduce the theory concepts.
 
-The folder lab session folder is structured as follows:
+The lab sessions folder are structured as follows:
 
 ```bash
 .
