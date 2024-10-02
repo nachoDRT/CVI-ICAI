@@ -1,8 +1,7 @@
 import numpy as np
 
 def non_max_suppression(img, theta):
-    
-    print("Hola, esto funciona")
+
     M, N = img.shape
     Z = np.zeros((M, N), dtype=np.int32)
 
