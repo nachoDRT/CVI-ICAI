@@ -100,3 +100,16 @@ El filtro Canny aporta un resultado más refinado para detectar bordes que el ob
 \addcontentsline{toc}{section}{Tarea B.6: Aplicación de filtro Canny}
 
 Aplique el filtro que acaba de definir al conjunto de imágenes de la carpeta \texttt{data}. Defina las variables necesarias para llamar al método. Puede utilizar una \textit{list comprehension} para trabajar de forma eficiente. Como resultado de aplicar el filtro, debería obtener los bordes de las imágenes de forma similar a cuando aplicó el filtro Sobel.
+
+\section*{Preguntas}
+\addcontentsline{toc}{section}{Preguntas}
+
+\vspace{5mm}
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta B.1, halign=left]
+Añada ruido a las imágenes de la carpeta \texttt{data}. Compare los resultados que obtiene al aplicar su filtro Sobel \textbf{con y sin filtro Gausiano}. Para añadir ruido, puede sumar a la imagen original una matriz de las dimensiones adecuadas. Puede utilizar \texttt{np.random.normal()}, pero tenga en cuenta que este proceso puede hacer que algunos valores de la imagen salgan del rango [0, 255] (tome las medidas necesarias para corregir esto).
+\end{tcolorbox}
+
+\vspace{5mm}
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta B.2, halign=left]
+Utilice la librería \texttt{scikit-image} y compare el efecto de los filtros Sobel, Canny y Prewitt sobre las imágenes de la carpeta \texttt{data}. ¿Qué diferencias observa entre los filtros? ¿Puede obtener alguna conclusión y/o patrón?
+\end{tcolorbox}
