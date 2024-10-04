@@ -12,7 +12,7 @@
 The topics we will cover are:
 
 * [x] **Lab 1:** Camera Calibration
-* [ ] **Lab 2:** 🛠️ Image Processing  🛠️
+* [x] **Lab 2:** Image Processing
 * [ ] **Lab 3:** 🛠️ Features Extraction and Bag of Words 🛠️
 * [ ] **Lab 4:** 🛠️  Object Tracking 🛠️
 * [ ] **Project:** 🛠️ Raspberry Pi 4 + Camera 🛠️ 

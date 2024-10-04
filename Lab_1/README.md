@@ -7,19 +7,19 @@
 </a>
 
 
-**Welcome to the 1st lab session of Computer *Vision I* at Comillas ICAI**. Here, you will find all the necessary files to complete this session. 💻📷
+**Welcome to the 1st lab session of Computer *Vision I* at Comillas ICAI**. Here, you will find all the necessary files to complete this session where you will learn how to calibrate cameras. 💻📷
 
 
 ## Resources
 
 This laboratory session contains the following:
 
-- 📄 **CVI_lab_1.pdf**: A ``PDF`` guide with instructions to complete the session.
-- 💻 **lab_1.ipynb**: the code to complete.
-- 🎞️ **data**: Arranged in three different subfolders: ``fisheye``, ``left`` and ``right``. They contain the images to process.
-- 📝 **template**: A folder with a ``latex`` template used to generate the guide. You can reuse it to write your report.
-- 🧩 **assets**: Files to style or improve documentation.
-- 📖 **README**: You are reading it!
+- 📄 **``CVI_lab_1.pdf``**: A ``PDF`` guide with instructions to complete the session.
+- 💻 **``lab_1.ipynb``**: the code to complete.
+- 🎞️ **``data``**: Arranged in three different subfolders: ``fisheye``, ``left`` and ``right``. They contain the images to process.
+- 📝 **``template``**: A folder with a ``latex`` template used to generate the guide. You can reuse it to write your report.
+- 🧩 **``assets``**: Files to style or improve documentation.
+- 📖 **``README``**: You are reading it!
 
 The lab session folder is structured as follows:
 
