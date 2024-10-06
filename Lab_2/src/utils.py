@@ -3,7 +3,7 @@ import numpy as np
 def non_max_suppression(img, theta):
 
     M, N = img.shape
-    Z = np.zeros((M, N), dtype=np.int32)
+    Z = np.zeros((M, N), dtype=np.float32)
 
     # converting radians to degree
     angle = theta * 180. / np.pi    # max -> 180, min -> -180
