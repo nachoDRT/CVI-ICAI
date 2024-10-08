@@ -43,6 +43,8 @@ Para obtener las máscaras y segmentar la imagen, puede utilizar respectivamente
 \texttt{dark\_orange = (255, 255, 255)}
 \end{tcolorbox}
 
+Para confirmar que está obteniendo los resultados adecuados, muestre una de las imágenes iniciales, su máscara y la imagen segmentada.
+
 
 \begin{figure}[h]
     \centering
@@ -54,7 +56,9 @@ Para obtener las máscaras y segmentar la imagen, puede utilizar respectivamente
 \section*{Tarea A.5: Segmentación de las partes blancas}
 \addcontentsline{toc}{section}{Tarea A.5: Segmentación de las partes blancas}
 
-En este paso deberá repetir un proceso similar al anterior, pero centrándose en los tonos blancos. Explore el rango de valores necesarios para segmentar los colores blancos de las imágenes.
+En este paso deberá repetir un proceso similar al anterior, pero centrándose en los tonos blancos. Explore el rango de valores necesarios para segmentar los colores blancos de las imágenes. Para ello, juegue con los valores de H, S y V en la interfaz que se le proporciona.
+
+De nuevo, para confirmar que está obteniendo los resultados adecuados, muestre la máscara y la imagen segmentada.
 
 \begin{figure}[h]
     \centering
@@ -67,6 +71,8 @@ En este paso deberá repetir un proceso similar al anterior, pero centrándose e
 \addcontentsline{toc}{section}{Tarea A.6: Combinación de máscaras}
 
 Combine las máscaras de los colores naranja y blanco para cada imagen. Posteriormente, segmente cada imagen con la máscara que ha generado. Como resultado, conseguirá segmentar el cuerpo de los peces en el conjunto imágenes. Debería obtener resultados parecidos al ejemplo de la Figura \ref{fig:fish_output}.
+
+Confirme que está obteniendo los resultados adecuados mostrando la máscara y la imagen segmentada.
 
 
 \begin{figure}[h]
@@ -88,4 +94,9 @@ Guarde las imágenes de interés como resultado de esta parte de la práctica.
 \vspace{5mm}
 \begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A.1, halign=left]
 Segmente por color el escudo de su equipo deportivo favorito: descompóngalo en al menos 2 colores. De igual forma que ha realizado en el ejercicio de clase, proporcione las máscaras binarias de cada color. Además, multiplique la máscara con la imagen original para visualizar solamente el color de interés. Por último indique el porcentaje que representa cada color sobre el total del escudo.
+\end{tcolorbox}
+
+\vspace{5mm}
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A.2, halign=left]
+¿Qué ocurre cuando carga las imágenes con la librería \texttt{imageio} pero las visualiza con la librería \texttt{OpenCV}? Investigue qué puede estar pasando y cómo podría solucionarlo. Pista: cv2.cvtColor().
 \end{tcolorbox}

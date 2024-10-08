@@ -68,7 +68,6 @@ Para aplicar el filtro Sobel, deberá tener cuenta los siguientes factores:
     \item \textbf{Transformación del filtro}. Transforme el filtro para obtener los bordes en la dirección ortogonal.
     \item \textbf{Bordes horizontales}. Con el filtro transformado, utilice de nuevo \texttt{cv2.Filter2D()} para obtener los bordes ortogonales.
     \item \textbf{Composición de bordes}. Obtenga los bordes de la imagen como una composición de los bordes detectados en cada dirección. Puede utilizar para ello \texttt{np.hypot()}.
-    \item \textbf{Normalización}. Normalice el resultado anterior para evitar valores fuera de rango y ruidos.
     \item \textbf{Orientación}. Obtenga la orientación de los bordes con \texttt{np.arctan2()}.
 \end{itemize}
 
@@ -76,7 +75,16 @@ Para aplicar el filtro Sobel, deberá tener cuenta los siguientes factores:
 \phantomsection
 \addcontentsline{toc}{section}{Tarea B.4: Aplicación de filtro Sobel}
 
-Aplique el filtro que acaba de definir al conjunto de imágenes de la carpeta \texttt{data}. Defina las variables necesarias para llamar al método. Puede utilizar una \textit{list comprehension} para trabajar de forma eficiente. Como resultado de aplicar el filtro, debería obtener un resultado similar al de la Figura \ref{fig:edges}.
+Aplique el filtro que acaba de definir al conjunto de imágenes de la carpeta \texttt{data}. Defina las variables necesarias para llamar al método. Puede utilizar una \textit{list comprehension} para trabajar de forma eficiente. Como resultado de aplicar el filtro, debería obtener un resultado similar al de la Figura \ref{fig:edges}. El filtro que debe introducir como argumento de la función es:
+
+\[
+\begin{bmatrix}
+-1 & 0 & 1 \\
+-2 & 0 & 2 \\
+-1 & 0 & 1
+\end{bmatrix}
+\]
+
 
 \begin{figure}[H]
     \centering
