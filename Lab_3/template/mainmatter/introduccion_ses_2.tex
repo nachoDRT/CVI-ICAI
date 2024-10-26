@@ -1,0 +1,62 @@
+\chapter{Sesión 2: Procesamiento de Imágenes}
+\label{chapter:introduction_ses_2}
+
+\section{Materiales}
+
+En esta práctica se trabajará con los siguientes recursos (puede encontrarlos en la sección de Moodle \textit{Laboratorio/Sesión 2}):
+
+\begin{itemize}
+    \item \textbf{lab\_2.ipynb}: notebook con el código que deberá completar.
+    \item \textbf{data}: carpeta con imágenes para trabajar durante la práctica.
+\end{itemize}
+
+\section{Apartados de la práctica}
+
+La Sesión 2 del laboratorio está dividida en los siguientes apartados:
+
+\begin{itemize}
+    \item Instalaciones: Instalación de librerías necesarias.
+    \item Librerías: Importación de las librerías que se utilizan en la sesión. Se recomienda realizar la importación en una celda inicial para mantener la organización del Notebook.
+    \item Apartado A: Segmentación de imágenes por color.
+    \item Apartado B: Implementación del filtro Gaussiano y detección de bordes con los métodos Sobel y Canny.
+    \item Apartado C: Operadores Morfológicos.
+\end{itemize}
+
+\section{Observaciones}
+
+Aunque el guion de la práctica y los comentarios en Markdown del Notebook estén escritos en español, observe que todo aquello que aparece en las celdas de código está escrito en inglés. Es una buena práctica que todo su código esté escrito en inglés.
+
+Aquellas partes del código que deberá completar están marcadas con la etiqueta \textbf{\texttt{TODO}}.
+
+Es muy importante que trabaje consultando la documentación de OpenCV\footnote{\href{https://docs.opencv.org/4.x/index.html}{Documentación de OpenCV}: \url{https://docs.opencv.org/4.x/index.html}} y \textit{skimage}\footnote{\href{https://scikit-image.org/docs/stable/}{Documentación de skimage}: \url{https://scikit-image.org/docs/stable/}} para familiarizarse de cara al examen. Tenga en cuenta que en los exámenes no podrá utilizar herramientas de ayuda como Copilot.
+
+\section{Qué va a aprender}
+
+Al finalizar esta práctica, sabrá cómo trabajar con diferentes espacios de color para la segmentación de imágenes, implementará filtros Gaussianos, y aplicará métodos de detección de bordes como Sobel y Canny. Además, comparará sus implementaciones con las funciones predefinidas en \textit{skimage}. También utilizará operadores morfológicos y comprenderá su utilidad.
+
+\section{Evaluación}
+
+La nota que obtenga en esta sesión de laboratorio será la misma que obtenga su pareja. Los apartados de la práctica serán evaluados como refleja la Tabla \ref{table:evaluacion}. Tenga en cuenta que en esta práctica puede obtener puntuación extra si realiza el Apartado dedicado a \textit{Operadores Morfológicos}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Tarea} & \textbf{Valor} & \textbf{Resultado} \\
+    \hline
+    Pregunta A.1 & 3.0 & \\
+    \hline
+    Pregunta A.2 & 1.0 & \\
+    \hline
+    Pregunta B.1 & 3.0 & \\
+    \hline
+    Pregunta B.2 & 3.0 & \\
+    \hline
+    Pregunta C.1 & 2.0 & \\
+    \hline
+    \textbf{Total} & \textbf{12.0} & \\
+    \hline
+    \end{tabular}
+    \caption{Valoración de los apartados de la práctica.}
+    \label{table:evaluacion}
+\end{table}
