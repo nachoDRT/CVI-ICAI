@@ -1,12 +1,12 @@
 \chapter{Apartado C: \textbf{Detección de puntos de interés y Bolsa de palabras}}
 \label{chapter:tarea_c}
 
-En este apartado deberá extraer los puntos de interés de una de las imágenes de la carpeta \texttt{data}. Una vez hecho, podrá comprobar la correspondencia con esa imagen alterada y la relación entre las mismas. Tras entender la funcionalidad de este método, pasará a obtener una bolsa de palabras a partir de un \textit{dataset} de entrenamiento y generar predicciones para un \textit{dataset} de evaluación.
+En este apartado deberá extraer los puntos de interés de una de las imágenes de la carpeta \texttt{data}. Una vez hecho, podrá comprobar la correspondencia con esa imagen alterada y la relación entre las mismas (Figura \ref{fig:feat_match}). Tras entender la funcionalidad de este método, pasará a obtener una bolsa de palabras a partir de un \textit{dataset} de entrenamiento y generar predicciones para un \textit{dataset} de evaluación.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{Lab_3/template/figures/FeatureMatch.png}
-    \caption{Correspondencia de características entre una imagen y la misma alterada con cv2}
+    \caption{Correspondencia de características entre una imagen y la misma alterada con OpenCV.}
     \label{fig:feat_match}
 \end{figure}
 
@@ -16,32 +16,33 @@ En este apartado deberá extraer los puntos de interés de una de las imágenes 
 \phantomsection
 \addcontentsline{toc}{section}{C.1: Detección de puntos de interés}
 
-En esta sección se generarán las funciones necesarias que cubran la detección de puntos de interés y los descriptorpes para las imágenes empleando la transformación SIFT.
+En esta sección se generarán las funciones necesarias que cubran la detección de puntos de interés y los descriptores para las imágenes empleando la transformación SIFT.
 La transformación SIFT consta de cuatro pasos principales:
 
 \begin{enumerate}
-    \item Detección de extremos en espacio de escalas
-    \item Localización de keypoints
-    \item Asignación de orientaciones
-    \item Generación de los descriptores de keypoints
+    \item Detección de extremos en espacio de escalas.
+    \item Localización de keypoints.
+    \item Asignación de orientaciones.
+    \item Generación de los descriptores de keypoints.
 \end{enumerate}
 
-Cada uno se irá desarrollando con las funciones necesarias para completarlos. De esta forma se comenzará generando el espacio de escalas en el que se evaluarán los extremos
+Cada uno se irá desarrollando con las funciones necesarias para completarlos. De esta forma se comenzará generando el espacio de escalas en el que se evaluarán los extremos.
 
 \subsection*{Tarea C.1.1: Filtro gaussiano con cv2}
 \phantomsection
 \addcontentsline{toc}{subsection}{Tarea C.1.1: Filtro gaussiano con cv2}
 
-Para generar el espacio de escalas que se desea analizar, se debe aplicar un filtrado gaussiano a la imagen original hasta obtener un número de imágenes gaussianas relevante. Para ello, debe desarrollar la función \texttt{generateGaussianImages()} empleando el método \texttt{GaussianBlur()} de la librería cv2.
+Para generar el espacio de escalas que se desea analizar, se debe aplicar un filtrado gaussiano a la imagen original hasta obtener un número de imágenes gaussianas relevante. Para ello, debe desarrollar la función \texttt{generateGaussianImages()} empleando el método \texttt{cv2.GaussianBlur()} \footnote{ \href{https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html\#gaabe8c836e97159a9193fb0b11ac52cf1}{Documentación del método \texttt{cv2.GaussianBlur()} en OpenCV:} \\{https://docs.opencv.org/3.4/d4/d86/group\_\_imgproc\_\_filter.html\#gaabe8c836e97159a9193fb0b11ac52cf1}} de la librería OpenCV.
 
-Como entrada, se recibe una imagenm, y una lista de sigmas que deberá aplicar en el filtrado. Deberá generar tantás imágenes gaussianas como sigmas haya en la lista aplicando el filtro al resultado del filtrado anterior o a la imagen original en primera instancia.
+
+Como entrada, se recibe una imagen, y una lista de sigmas que deberá aplicar en el filtrado. Deberá generar tantas imágenes gaussianas como sigmas haya en la lista aplicando el filtro al resultado del filtrado anterior o a la imagen original en primera instancia.
 
 \subsection*{Tarea C.1.2: Generación de espacio de escalas con imágenes gaussianas}
 \addcontentsline{toc}{subsection}{Tarea C.1.2: Generación de espacio de escalas con imágenes gaussianas}
 
-Deberá cargar la imagen base de la carpeta de \texttt{data} con cv2 y en escala de grises sin emplear la función \texttt{cv2.cvtColor()}. A continuación, se definen los parámetros iniciales del espacio de escalas, la \textit{sigma} inicial y el número de diferencias gaussianas que se desea generar. Cabe destacar que aunque el mínimo de gaussianas necesarias son 3 para detectar los máximos y minimos en las ventanas de 3x3x3 como se verá más adelante, es posible que no sea suficiente este valor para detectar esos puntos de interés. Por último, emplee el método \texttt{generateGaussianImages()} que ha desarrollado en el apartado anterior.
+Deberá cargar la imagen base de la carpeta de \texttt{data} con cv2 y en escala de grises sin emplear la función \texttt{cv2.cvtColor()}. A continuación, se definen los parámetros iniciales del espacio de escalas, la \textit{sigma} inicial y el número de diferencias gaussianas que se desea generar. Cabe destacar que aunque el mínimo de gaussianas necesarias son 3 para detectar los máximos y mínimos en las ventanas de 3x3x3 como se verá más adelante, es posible que no sea suficiente este valor para detectar esos puntos de interés. Por último, emplee el método \texttt{generateGaussianImages()} que ha desarrollado en el apartado anterior.
 
-Como puede observar en el código, se le proporciona el método \texttt{generateGaussianSigmas()} que recibe la \textit{sigma} inicial y el número de diferencias de gaussianas que desea generar. Este método devuelve una lista de valores de \textit{sigma} que deberá aplicar en los filtrados consecutivos para la generación de las imágenes gaussianas. Si quiere generar \textit{n} diferencias de gaussianas, el método le devolverá \textit{n+1} valores de sigma.
+Como puede observar en el código, se le proporciona el método \texttt{generateGaussianSigmas()} que recibe la \textit{sigma} inicial y el número de diferencias de gaussianas que desea generar. Este método devuelve una lista de valores de \textit{sigma} que deberá aplicar en los filtrados consecutivos para la generación de las imágenes gaussianas. Si quiere generar \textit{n} diferencias de gaussianas, el método le devolverá \textit{n+1} valores de sigma. La Figura \ref{fig:gauss_blur} muestra un ejemplo del resultado esperado de este apartado.
 
 \begin{figure}[h]
     \centering
@@ -53,7 +54,9 @@ Como puede observar en el código, se le proporciona el método \texttt{generate
 \subsection*{Tarea C.1.3: Generación de diferencias de gaussianas}
 \addcontentsline{toc}{subsection}{Tarea C.1.3: Generación de diferencias de gaussianas}
 
-A partir de la lista de imágenes anteriores, se deberán generar una nueva lista con las diferencias entre las imágenes consecutivas empleando el método \texttt{subtract} de la librería \texttt{cv2}.
+A partir de la lista de imágenes anteriores, se deberán generar una nueva lista con las diferencias entre las imágenes consecutivas empleando el método \texttt{subtract} \footnote{ \href{https://docs.opencv.org/3.4/d2/de8/group\_\_core\_\_array.html\#gaa0f00d98b4b5edeaeb7b8333b2de353b}{Documentación del método \texttt{cv2.subtract()} en OpenCV:} \\{https://docs.opencv.org/3.4/d2/de8/group\_\_core\_\_array.html\#gaa0f00d98b4b5edeaeb7b8333b2de353b}} de la librería \texttt{OpenCV}. La Figura \ref{fig:dog} muestra un ejemplo del resultado esperado de este apartado.
+
+
 
 \begin{figure}[h]
     \centering
