@@ -171,7 +171,7 @@
 
         %% Add the logo in the bottom left
         \node[above right=10mm] at (current page.south west) {%
-            \includegraphics[width=0.5\linewidth]{Lab_2/template/figures/logo-white.pdf}};
+            \includegraphics[width=0.5\linewidth]{Lab_4/template/figures/logo-white.pdf}};
 
         %% Add the banner with the title, subtitle, subject and author(s)
         \node[below=2cm,fill=black!85,minimum width={\paperwidth},inner ysep=25pt,opacity=0.6,text opacity=1] at (current page.north) {%
