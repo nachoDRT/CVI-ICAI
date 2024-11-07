@@ -2,14 +2,41 @@
 \label{chapter:tarea_a}
 
 
-\section*{Tarea A.1:}
+\section*{Tarea A.1: Carga de vídeo}
 \phantomsection
-\addcontentsline{toc}{section}{Tarea A.1:}
+\addcontentsline{toc}{section}{Tarea A.1: Carga de vídeo}
+Cargue un vídeo en el cual se detectarán objetos en movimiento. Puede utilizar un vídeo local o la cámara en tiempo real.
 
+\section*{Tarea A.2: Sustracción de fondo mediante diferencia de frames}
+\phantomsection
+\addcontentsline{toc}{section}{Tarea A.2: Sustracción de fondo mediante diferencia de frames}
+Realice una sustracción de fondo mediante diferencia de frames, para ello guarde un frame con el fondo estático y úselo como frame de referencia de fondo.
+
+\section*{Tarea A.3: Configuración de la Sustracción de Fondo con GMM}
+\phantomsection
+\addcontentsline{toc}{section}{Tarea A.3: Configuración de la Sustracción de Fondo con GMM}
+
+Configure el sustractor de fondo usando el modelo de mezcla de gaussianas adaptativas (MOG2).
+
+\section*{Tarea A.4: Aplicación de la Sustracción de Fondo}
+\phantomsection
+\addcontentsline{toc}{section}{Tarea A.4: Aplicación de la Sustracción de Fondo}
+Aplique la sustracción de fondo en cada frame para extraer los objetos en movimiento.
+
+\section*{Tarea A.5: Visualización y Guardado de Resultados}
+\phantomsection
+\addcontentsline{toc}{section}{Tarea A.5: Visualización y Guardado de Resultados}
+Visualice el resultado de la detección de movimiento y guarde la imagen binaria resultante en la carpeta \texttt{data/results}.
 
 \section*{Preguntas}
 \addcontentsline{toc}{section}{Preguntas}
 
 \vspace{5mm}
 \begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A.1, halign=left]
+¿Cómo afecta la variable \texttt{varThreshold} a la precisión de la detección?
+\end{tcolorbox}
+
+\vspace{5mm}
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta A.2, halign=left]
+¿Qué ventajas presenta \texttt{createBackgroundSubtractorMOG2} frente a métodos simples de diferencia de imágenes?
 \end{tcolorbox}
