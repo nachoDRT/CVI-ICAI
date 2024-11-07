@@ -5,28 +5,44 @@
 \section*{Tarea A.1: Carga de vídeo}
 \phantomsection
 \addcontentsline{toc}{section}{Tarea A.1: Carga de vídeo}
-Cargue un vídeo en el cual se detectarán objetos en movimiento. Puede utilizar un vídeo local o la cámara en tiempo real.
+Cargue el vídeo (\texttt{'visiontraffic.avi'}) en el cual se detectarán objetos en movimiento. Para ello, realice complete el método \texttt{read\_video} que puedrá reutilizar en el resto de tareas. 
 
 \section*{Tarea A.2: Sustracción de fondo mediante diferencia de frames}
 \phantomsection
 \addcontentsline{toc}{section}{Tarea A.2: Sustracción de fondo mediante diferencia de frames}
 Realice una sustracción de fondo mediante diferencia de frames, para ello guarde un frame con el fondo estático y úselo como frame de referencia de fondo.
 
+En primer lugar vamos a iterar sobre la lista de frames para mostrar por pantalla frame a frame e iremos avanzando con pulsando la tecla n, para seleccionar el frame de referencia debera pulsar la tecla s.
+
+Posteriormente se realizará la diferencia de frames entre el frame referencia y el frame actual.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{Lab_4/template/figures/frame_difference.png}
+    \caption{Ejemplo de resultado con diferencia de frames.}
+    \label{fig:ejemplo_framediff}
+\end{figure}
+
 \section*{Tarea A.3: Configuración de la Sustracción de Fondo con GMM}
 \phantomsection
 \addcontentsline{toc}{section}{Tarea A.3: Configuración de la Sustracción de Fondo con GMM}
 
-Configure el sustractor de fondo usando el modelo de mezcla de gaussianas adaptativas (MOG2).
+Configure el sustractor de fondo usando el modelo de mezcla de gaussianas adaptativas (MOG2). Para ello, usaremos \texttt{cv2.createBackgroundSubtractorMOG2}\footnote{ \href{https://docs.opencv.org/4.8.0/d7/d7b/classcv_1_1BackgroundSubtractorMOG2.html}{Documentación del método MOG2 en OpenCV:} \\{https://docs.opencv.org/4.8.0/d7/d7b/classcv\_1\_1BackgroundSubtractorMOG2.html}}
 
 \section*{Tarea A.4: Aplicación de la Sustracción de Fondo}
 \phantomsection
 \addcontentsline{toc}{section}{Tarea A.4: Aplicación de la Sustracción de Fondo}
 Aplique la sustracción de fondo en cada frame para extraer los objetos en movimiento.
 
-\section*{Tarea A.5: Visualización y Guardado de Resultados}
-\phantomsection
-\addcontentsline{toc}{section}{Tarea A.5: Visualización y Guardado de Resultados}
-Visualice el resultado de la detección de movimiento y guarde la imagen binaria resultante en la carpeta \texttt{data/results}.
+
+Visualice el resultado de la detección de movimiento y guarde el vídeo con las imagenes binarias resultantes en la carpeta \texttt{data/results}. Utilize el método \texttt{cv2.VideoWriter}\footnote{ \href{https://docs.opencv.org/4.8.0/dd/d9e/classcv_1_1VideoWriter.html}{Documentación del método MOG2 en OpenCV:} \\{https://docs.opencv.org/4.8.0/dd/d9e/classcv\_1\_1VideoWriter.html}}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{Lab_4/template/figures/MOG2.png}
+    \caption{Ejemplo de resultado usando MOG2.}
+    \label{fig:ejemplo_mog2}
+\end{figure}
 
 \section*{Preguntas}
 \addcontentsline{toc}{section}{Preguntas}
