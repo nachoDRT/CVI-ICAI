@@ -10,37 +10,38 @@
 **Welcome to the 4th lab session of Computer *Vision I* at Comillas ICAI**. Here, you will find all the necessary files to complete this session. 💻📷
 
 
-## Resources (WIP 🛠️)
+## Resources
 
 This laboratory session contains the following:
 
-- 📄 **Guide**: A ``PDF`` guide with instructions to complete the session (currently only available in Spanish).
-- 💻 **Script**: a ``.ipynb`` or ``.py`` file to complete.
-- 🎞️ **Data**: A folder containing images to process.
-- 📝 **Template**: A folder with a ``latex`` template used to generate the guide. You can reuse it to write your report.
-- 🧩 **Assets**: Files to style or improve documentation.
-- 📖 **README**: With links to motivate the session or to introduce the theory concepts.
+- 📄 **``CVI_Lab_4.pdf``**: A ``PDF`` guide with instructions to complete the session (currently only available in Spanish).
+- 💻 **``lab4.ipynb``**: The file to complete.
+- 🎞️ **``data``**: A folder containing the videos to process.
+- 📝 **``template``**: A folder with a ``latex`` template used to generate the guide. You can reuse it to write your report.
+- 🧩 **``assets``**: Files to style or improve documentation.
+- 📖 **``README``**: With links to motivate the session or to introduce the theory concepts.
 
 The lab session folder is structured as follows:
 
 ```bash
 .
-├── guide.pdf
+├── CVI_Lab_4.pdf
 ├── src
-│   ├── lab_session.ipynb
-│   ├── lab_session.py
-│   └── ...
+│   └── lab4.ipynb
 ├── data
-│   ├── image1.png
-│   ├── image2.png
-│   └── ...
+│   ├── slow_traffic_small.mp4
+│   └── visiontraffic.avi
 ├── assets
 ├── template
 └── README
 ```
 
-## Get ready 🤓 (WIP 🛠️)
+## Get ready 🤓
 If you're not enrolled or don't have access to the theory, or just want a refresher, check out the resources below before starting the lab.
+
+- [Background Subtraction](https://www.youtube.com/watch?v=fn07iwCrvqQ)
+- [Optical Flow](https://www.youtube.com/watch?v=lnXFcmLB7sM&list=PL2zRqk16wsdoYzrWStffqBAoUY8XdvatV)
+- [Kalman Filter](https://thekalmanfilter.com/kalman-filter-explained-simply/)
 
 <h2 align="center" style="margin-bottom: 0px;">Here we go: Lesson 4!</h2>
 <h3 align="center" style="margin-top: 0px;">Object tracking</h3>

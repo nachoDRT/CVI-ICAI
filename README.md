@@ -14,7 +14,7 @@ The topics we will cover are:
 * [x] **Lab 1:** Camera Calibration
 * [x] **Lab 2:** Image Processing
 * [x] **Lab 3:** Features Extraction and Bag of Words
-* [ ] **Lab 4:** 🛠️  Object Tracking 🛠️
+* [x] **Lab 4:** Object Tracking
 * [ ] **Project:** 🛠️ Raspberry Pi 4 + Camera 🛠️ 
 
 Each structured session is designed to be completed in 2 hours in the lab. The additional, non-guided questions we propose in the lab manual are intended as homework to be done outside of class time.
@@ -29,18 +29,18 @@ For students outside ICAI or not enrolled in the course, we will provide relevan
 
 Each laboratory session contains the following:
 
-- 📄 **Guide**: A ``PDF`` guide with instructions to complete the session (currently only available in Spanish).
-- 💻 **Script**: a ``.ipynb`` or ``.py`` file to complete.
-- 🎞️ **Data**: A folder containing images to process.
-- 📝 **Template**: A folder with a ``latex`` template used to generate the guide. You can reuse it to write your report.
-- 🧩 **Assets**: Files to style or improve documentation.
-- 📖 **README**: With links to motivate the session or to introduce the theory concepts.
+- 📄 **``Lab_x.pdf``**: A ``PDF`` guide with instructions to complete the session (currently only available in Spanish).
+- 💻 **``scr``**: a folder with ``.ipynb`` or ``.py`` files to complete.
+- 🎞️ **``data``**: A folder containing images to process.
+- 📝 **``template``**: A folder with a ``latex`` template used to generate the guide. You can reuse it to write your report.
+- 🧩 **``assets``**: Files to style or improve documentation.
+- 📖 **``README``**: With links to motivate the session or to introduce the theory concepts.
 
 The lab sessions folder are structured as follows:
 
 ```bash
 .
-├── guide.pdf
+├── Lab_x.pdf
 ├── src
 │   ├── lab_session.ipynb
 │   ├── lab_session.py
@@ -48,6 +48,7 @@ The lab sessions folder are structured as follows:
 ├── data
 │   ├── image1.png
 │   ├── image2.png
+│   ├── video1.avi
 │   └── ...
 ├── assets
 ├── template
