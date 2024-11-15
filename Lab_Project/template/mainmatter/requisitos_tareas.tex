@@ -1,0 +1,27 @@
+\chapter{\textbf{Requisitos y Tareas}}
+\label{chapter:requisitos}
+
+\subsection*{Hardware}
+\phantomsection
+\addcontentsline{toc}{section}{Hardware}
+\vspace{5mm}
+
+\begin{itemize}
+    \item \textbf{Raspberry Pi}: es imprescindible el uso de la Raspberry Pi. En ella se alojará el sistema diseñado.
+    \item \textbf{Cámara}: es imprescindible el uso de la cámara como entrada de datos del sistema.
+\end{itemize}
+
+\subsection*{Software}
+\phantomsection
+\addcontentsline{toc}{section}{Software}
+\vspace{5mm}
+
+\begin{itemize}
+    \item \textbf{Calibración}: es imprescindible implementar la calibración de la cámara utilizando un patrón que diseñéis vosotros, así como un método de calibración de implementación propia. En el informe se deberán incluir los valores resultantes de la calibración, incluido el RMS.
+    \item \textbf{Detección de patrones}: Se deberá implementar un módulo capaz de diferenciar patrones sencillos a través de procesado de imagen: líneas negras sobre fondo blanco, círculos, etc. Se valorará el método de detección de estos patrones, así como el diseño de los mismos.
+    \item \textbf{Extracción de información}: se debe implementar un decodificador que memorice hasta 4 patrones consecutivos y garantice o bloquee el paso al siguiente bloque en función de si estos patrones están en el orden correcto o no. El alumno deberá implementar para ello una lógica que permita memorizar esta secuencia y resetear u olvidarla cuando se necesite.
+    \item \textbf{Tracker}: al introducir la secuencia de patrones correcta, se ejecutará el tracker que deberá mostrar por pantalla una bounding box alrededor de la zona de interés que aparezca en la imagen y seguirla mientras se mueve. La explicación del algoritmo de la detección y su monitorización deberá incluirse en el informe final del proyecto.
+    \item \textbf{Módulos mínimos}: Salida de vídeo, calibración, detección de al menos un tipo de patrón, decodificador de secuencia y tracker.
+    \item \textbf{Cualquier propuesta adicional al planteamiento inicial del proyecto se valorará positivamente}: nuevos módulos, distintos modos de funcionamiento, etc.
+    \item \textbf{Real time}: se valorará positivamente también que el código esté optimizado. Es fundamental que tengáis esto en mente. De nada sirve un algoritmo de detección de patrones si luego no funciona a una tasa de refresco lo suficientemente rápida como para que sea útil. Esto también permite que este proyecto se pueda integrar con otros, como puede ser en la asignatura de robots del segundo cuatrimestre.
+\end{itemize}

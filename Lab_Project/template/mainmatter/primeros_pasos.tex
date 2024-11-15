@@ -1,0 +1,44 @@
+\chapter{\textbf{Primeros Pasos}}
+\label{chapter:primeros_pasos}
+
+\subsection*{Hardware}
+\phantomsection
+\addcontentsline{toc}{section}{Hardware}
+\vspace{5mm}
+
+Al comienzo de la sesión dispondrá de:
+
+\begin{itemize}
+    \item \textbf{Raspberry Pi}.
+    \item \textbf{Camera module 3 WIDE (120º FOV)}.
+    \item \textbf{Cable de alimentación a USB3}.
+    \item \textbf{Cable HDMI to micro-HDMI (opcional)}
+\end{itemize}
+
+Realice el montaje según las indicaciones de su profesor. Todas las Rasspberry tienen flasheadas un sistema operativo compatible y con SSH activado. Aunque se recomienda el uso de un cable HDMI para facilitar el proceso, puede acceder a su Raspberry de múltiples formas:
+
+Puede encontrar la IP address de su placa o su “host name” para conectarse, o bien por SSH (SSH host-name.local) o por VNC (connect to host-name). Para conectarse por SSH puede utilizar Putty. Para conectarte por VNC puede usar RealVNC. No es necesario usar un programa concreto para la conexión con la Raspberry, use el que mejor se adecúe a sus necesidades.
+
+Previamente, deberá haber habilitado en las interfaces de tu Raspberry (sudo raspi-config):
+
+\begin{itemize}
+    \item \textbf{Habilitar I2C}
+    \item \textbf{Habilitar VNC}
+    \item \textbf{Deshabilitar legacy camera}
+\end{itemize}
+
+Para comprobar que la cámara está conectada, al ejecutar: \texttt{sudo vcgencmd get\_camera} debería aparece una cámara detectada y conectada.
+Para obtener vídeo de un modo fácil, ejecute \texttt{libcamera-hello}. Como alternativa puede recurrir a las funciones de \texttt{OpenCV} para lectura de vídeo.
+
+\subsection*{Sesión Inicial}
+\phantomsection
+\addcontentsline{toc}{section}{Sesión Inicial}
+\vspace{5mm}
+En la primera sesión se espera que se aborden los siguientes puntos:
+
+\begin{itemize}
+    \item \textbf{Montaje}: Conexión con la Raspberry. Acceso con escritorio remoto, SSH o mediante cable HDMI.
+    \item \textbf{Conexión} de cámara y recepción de vídeo.
+    \item \textbf{Repositorio del proyecto}. Primer commit con el código de lectura de vídeo desde la cámara. Recuerde que se debe crear un ReadMe con la descripción del proyecto. Deberá hacer el proyecto público y compartir el enlace al mismo con el profesor.
+    \item  \textbf{Planteamiento y diseño del proyecto}. Recuerde que antes de implementar su proyecto, debe contar con la aprobación del profesor.
+\end{itemize}
