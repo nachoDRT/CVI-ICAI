@@ -1,0 +1,69 @@
+\begin{titlepage}
+
+\begin{center}
+
+\bigskip
+\bigskip
+
+%% Print the name of the author
+{\makeatletter
+\begin{tabular}{c}
+    3º \@author \\\midrule
+    Curso 2024/25
+\end{tabular}
+\makeatother}
+
+\bigskip
+\bigskip
+
+%% Print the title
+{\makeatletter
+\largetitlestyle\fontsize{45}{45}\selectfont\@title
+\makeatother}
+
+%% Print the subtitle
+{\makeatletter
+\ifdefvoid{\@subtitle}{}{\bigskip\titlestyle\fontsize{20}{20}\selectfont\@subtitle}
+\makeatother}
+
+%% Print table with names; easily add columns if necessary or remove the table completely
+% \setlength\extrarowheight{2pt}
+% \begin{tabular}{c}
+%     3º  \\\midrule
+%     Curso 2024/25 \\
+% \end{tabular}
+
+\vfill
+
+%% Print some more information at the bottom
+\begin{tabular}{ll}
+    \textbf{Profesor}: & \textbf{Email} \\
+    Erik Velasco & evelasco@icai.comillas.edu \\
+    Lionel Güitta & lglopez@icai.comillas.edu \\
+    Daniel Pinilla & dpinilla@icai.comillas.edu \\
+    Luis Arias & learias@icai.comillas.edu \\
+    Rodrigo Sánchez & rsmolina@icai.comillas.edu \\ 
+    Ignacio de Rodrigo & iderodrigo@comillas.edu \\
+\end{tabular}
+
+\bigskip
+\bigskip
+
+%% Add a source and description for the cover and optional attribution for the template
+\begin{tabular}{p{15mm}p{10cm}}
+    Cover: &Tiny satellites, also known as CubeSats, are pictured after being deployed into Earth orbit from a small satellite orbital deployer on the outside of the International Space Station's Kibo laboratory module. Image Credit: NASA/Tracy Dyson \\
+    % Feel free to remove the following attribution, it is not required - still appreciated :-)
+    % Style: & TU Delft Report Style, with modifications by Daan Zwaneveld
+\end{tabular}
+\vspace{10mm}
+
+\end{center}
+
+%% Insert the Comillas logo at the bottom of the page
+\begin{tikzpicture}[remember picture, overlay]
+    \node[above=10mm] at (current page.south) {%
+        \includegraphics[scale=0.15]{figures/logo-color}
+    };
+\end{tikzpicture}
+
+\end{titlepage}

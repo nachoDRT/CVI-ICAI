@@ -1,0 +1,28 @@
+\chapter{Ejercicio Adicional: \textbf{Exploración del Modelo de Mezcla de Gaussianas (GMM)}}
+\label{chapter:tarea_d}
+
+Esta sección es completamente voluntaria y puede realizarla para mejorar su puntuación en la práctica.
+
+\subsection*{Objetivo}
+Investigue cómo funciona el modelo de mezcla de gaussianas (GMM) para mejorar la detección en condiciones de iluminación cambiantes.
+
+\begin{enumerate}
+    \item \textbf{Implementación del GMM}: Utilice \texttt{cv2.createBackgroundSubtractorMOG()} y ajuste el parámetro \texttt{history} para observar cómo cambia la detección en función de la duración de la memoria del fondo.
+    \item \textbf{Comparación con MOG2}: Observe las diferencias en la sensibilidad a las sombras y los cambios de iluminación. Pruebe con vídeos que incluyan cambios graduales de iluminación y objetos que se detienen temporalmente.
+\end{enumerate}
+
+\section*{Preguntas}
+\addcontentsline{toc}{section}{Preguntas}
+
+\vspace{5mm}
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta D.1, halign=left]
+¿Qué ventajas observa en \texttt{createBackgroundSubtractorMOG} en comparación con \texttt{createBackgroundSubtractorMOG2}?
+\end{tcolorbox}
+
+\vspace{5mm}
+\begin{tcolorbox}[colback=gray!10, colframe=gray!30, coltitle=black, title=Pregunta D.2, halign=left]
+¿Cómo afecta el parámetro \texttt{history} al rendimiento de detección en escenas con objetos que aparecen y desaparecen?
+
+\vspace{3mm}
+Al finalizar este ejercicio, agregue las observaciones y las imágenes generadas en el informe final de la práctica para una evaluación completa de los resultados.
+\end{tcolorbox}
