@@ -170,7 +170,7 @@
             \ifdefvoid{\@affiliation}{}{\color{white}\titlestyle\@affiliation}};
 
         %% Add the logo in the bottom left
-        \node[above right=10mm] at (current page.south west) {%
+        \node[above left=10mm] at (current page.south east) {%
             \includegraphics[width=0.5\linewidth]{Lab_4/template/figures/logo-white.pdf}};
 
         %% Add the banner with the title, subtitle, subject and author(s)
