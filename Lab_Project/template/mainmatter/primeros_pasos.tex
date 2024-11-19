@@ -17,18 +17,35 @@ Al comienzo de la sesión dispondrá de:
 
 Realice el montaje según las indicaciones de su profesor. Todas las Rasspberry tienen flasheadas un sistema operativo compatible y con SSH activado. Aunque se recomienda el uso de un cable HDMI para facilitar el proceso, puede acceder a su Raspberry de múltiples formas:
 
-Puede encontrar la IP address de su placa o su “host name” para conectarse, o bien por SSH (SSH host-name.local) o por VNC (connect to host-name). Para conectarse por SSH puede utilizar Putty. Para conectarte por VNC puede usar RealVNC. No es necesario usar un programa concreto para la conexión con la Raspberry, use el que mejor se adecúe a sus necesidades.
+Puede encontrar la IP address de su placa o su \textit{host name} para conectarse, o bien por SSH (SSH host-name.local) o por VNC (connect to host-name). Para conectarse por SSH puede utilizar Putty. Para conectarte por VNC puede usar RealVNC. No es necesario usar un programa concreto para la conexión con la Raspberry, use el que mejor se adecúe a sus necesidades. Regístrese con las credenciales de la Tabla \ref{table:credenciales}:
 
-Previamente, deberá haber habilitado en las interfaces de tu Raspberry (sudo raspi-config):
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Campo} & \textbf{Valor}\\
+    \hline
+    Usuario & pi \\
+    \hline
+    Contraseña & imat@ICAI2024 \\
+    \hline
+    IP (Comillas) & 10.120.107.<número> \\
+    \hline
+    Nombre del equipo (hostname) en Comillas & imat-rpi-<xyz>.rpi-deac.alumnos.upcont.es \\
+    \hline
+    Nombre del equipo en otra red & imat-rpi-<xyz> \\
+    \hline
+    \end{tabular}
+    \caption{Credenciales para iniciar sesión en la Raspberry Pi. Tenga en cuenta que <número> es el código de la placa que le han dado (por ejemplo 42), mientras que código <xyz> es el mismo número precedido por 0 (por ejemplo 042).}
+    \label{table:credenciales}
+\end{table}
 
-\begin{itemize}
-    \item \textbf{Habilitar I2C}
-    \item \textbf{Habilitar VNC}
-    \item \textbf{Deshabilitar legacy camera}
-\end{itemize}
+Para comprobar que la cámara está conectada, ejecute el archivo que encontrará en la carpeta del projecto final: \texttt{test.py}. Como resultado, si se ha conectado directamente a un monitor, o si lo ha hecho con escritorio remoto, debería ver el vídeo captado por la cámara en tiempo real.
 
-Para comprobar que la cámara está conectada, al ejecutar: \texttt{sudo vcgencmd get\_camera} debería aparece una cámara detectada y conectada.
-Para obtener vídeo de un modo fácil, ejecute \texttt{libcamera-hello}. Como alternativa puede recurrir a las funciones de \texttt{OpenCV} para lectura de vídeo.
+Si trabaja de manera cómoda implementando el código directamente en la Raspberry, puede optar por instalar Visual Studio Code desde el terminal de su Raspberry. Esta es una buena opción, puesto que podrá integrar el soporte Git de VSCode directamente. Utilice los siguientes comandos:\\
+
+\texttt{sudo apt-get update}\\
+\texttt{sudo apt-get install code}
 
 \subsection*{Sesión Inicial}
 \phantomsection
